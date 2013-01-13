@@ -1,0 +1,27 @@
+name: XFly
+main: com.gizmoplex.bukkit.XFlyPlugin.XFlyPlugin
+version: 0.1
+commands:
+  fly:
+    description: Enable flying.
+    usage: /fly
+    permission: XFlyPlugin.fly
+    permission-message: You do not have permission to use the fly command.
+  fly-stop:
+    description: Disable flying.
+    usage: /fly-stop
+    permission: XFlyPlugin.fly-stop
+    permission-message: You do not have permission to use the fly-stop command.
+permissions:
+  XFlyPlugin.*:
+    description: Access to all "fly" commands.
+    children:
+      XFlyPlugin.fly: true
+      XFlyPlugin.fly-stop: true
+  XFlyPlugin.fly:
+    description: Permission to enable flying.
+    default: op
+  XFlyPlugin.fly-stop:
+    description: Permission to disable flying.
+    default: op
+  
